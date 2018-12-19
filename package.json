@@ -20,7 +20,10 @@
     },
     "library": {
       "name": "pesy_test.lib",
-      "namespace": "PesyTest"
+      "namespace": "PesyTest",
+      "require": [
+        "levenshtein"
+      ]
     },
     "executable": {
       "require": [
@@ -37,6 +40,7 @@
   "dependencies": {
     "@esy-ocaml/reason": "*",
     "@opam/dune": "*",
+    "@opam/levenshtein": "1.1.3",
     "ocaml": "^4.4.0",
     "pesy": "*",
     "refmterr": "*"

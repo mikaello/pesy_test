@@ -1,5 +1,5 @@
 {
-  "hash": "e1b3d55ac6fa4e2aad6b0b580d4538a9",
+  "hash": "c0d4728018d8aa8582c6c3a2e854be86",
   "root": "root@path:./package.json",
   "node": {
     "root@path:./package.json": {
@@ -12,8 +12,8 @@
       },
       "dependencies": [
         "@esy-ocaml/reason@3.3.7", "@opam/dune@opam:1.6.2",
-        "@opam/merlin@opam:3.2.2", "ocaml@4.7.1003", "pesy@0.3.16",
-        "refmterr@3.1.10"
+        "@opam/levenshtein@opam:1.1.3", "@opam/merlin@opam:3.2.2",
+        "ocaml@4.7.1003", "pesy@0.3.16", "refmterr@3.1.10"
       ]
     },
     "refmterr@3.1.10": {
@@ -139,6 +139,69 @@
       "dependencies": [
         "@esy-ocaml/substs@0.0.1", "@opam/jbuilder@opam:transition",
         "@opam/seq@opam:base", "ocaml@4.7.1003"
+      ]
+    },
+    "@opam/ppxx@opam:2.3.2": {
+      "record": {
+        "name": "@opam/ppxx",
+        "version": "opam:2.3.2",
+        "source":
+          "archive:https://bitbucket.org/camlspotter/ppxx/get/2.3.2.tar.gz#md5:d973f4527cc9607ce00aa2f43636e25f",
+        "files": [],
+        "opam": {
+          "name": "ppxx",
+          "version": "2.3.2",
+          "opam":
+            "opam-version: \"2.0\"\nname: \"ppxx\"\nversion: \"2.3.2\"\nsynopsis: \"Ppxx: a small extension library for writing PPX preprocessors\"\ndescription: \"\"\"\n# PPXX: a small extension library for PPX\n\nPPXX contains several utility functions to make PPX preprocessors easier.\"\"\"\nmaintainer: \"jun.furuse@gmail.com\"\nauthors: \"Jun Furuse\"\nhomepage: \"http://bitbucket.org/camlspotter/ppxx\"\nbug-reports:\n  \"https://bitbucket.org/camlspotter/ppxx/issues?status=new&status=open\"\ndepends: [\n  \"ocaml\" {>= \"4.07.0\"}\n  \"ocamlfind\" {build}\n  \"jbuilder\" {build}\n  \"ppx_tools_versioned\" {>= \"5.0\"}\n  \"ocaml-migrate-parsetree\"\n]\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"hg+ssh://https//bitbucket.org/camlspotter/ppxx\"\nurl {\n  src: \"https://bitbucket.org/camlspotter/ppxx/get/2.3.2.tar.gz\"\n  checksum: \"md5=d973f4527cc9607ce00aa2f43636e25f\"\n}",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.1.0",
+        "@opam/ocamlfind@opam:1.8.0", "@opam/ppx_tools_versioned@opam:5.2.1",
+        "ocaml@4.7.1003"
+      ]
+    },
+    "@opam/ppx_tools_versioned@opam:5.2.1": {
+      "record": {
+        "name": "@opam/ppx_tools_versioned",
+        "version": "opam:5.2.1",
+        "source":
+          "archive:https://github.com/ocaml-ppx/ppx_tools_versioned/archive/5.2.1.tar.gz#md5:1ae6ae43ec161fbbf12c2b4d3a7e26f5",
+        "files": [],
+        "opam": {
+          "name": "ppx_tools_versioned",
+          "version": "5.2.1",
+          "opam":
+            "opam-version: \"2.0\"\nname: \"ppx_tools_versioned\"\nversion: \"5.2.1\"\nsynopsis: \"A variant of ppx_tools based on ocaml-migrate-parsetree\"\nmaintainer: \"frederic.bour@lakaban.net\"\nauthors: [\n  \"Frédéric Bour <frederic.bour@lakaban.net>\"\n  \"Alain Frisch <alain.frisch@lexifi.com>\"\n]\nlicense: \"MIT\"\ntags: \"syntax\"\nhomepage: \"https://github.com/let-def/ppx_tools_versioned\"\nbug-reports: \"https://github.com/let-def/ppx_tools_versioned/issues\"\ndepends: [\n  \"ocaml\" {>= \"4.02.0\"}\n  \"jbuilder\" {build & >= \"1.0+beta17\"}\n  \"ocaml-migrate-parsetree\" {>= \"1.0.10\"}\n]\nbuild: [\n  [\"jbuilder\" \"subst\" \"-p\" name] {pinned}\n  [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\n  [\"jbuilder\" \"runtest\" \"-p\" name \"-j\" jobs] {with-test}\n]\ndev-repo: \"git://github.com/let-def/ppx_tools_versioned.git\"\nurl {\n  src:\n    \"https://github.com/ocaml-ppx/ppx_tools_versioned/archive/5.2.1.tar.gz\"\n  checksum: \"md5=1ae6ae43ec161fbbf12c2b4d3a7e26f5\"\n}",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/jbuilder@opam:transition",
+        "@opam/ocaml-migrate-parsetree@opam:1.1.0", "ocaml@4.7.1003"
+      ]
+    },
+    "@opam/ppx_test@opam:1.6.0": {
+      "record": {
+        "name": "@opam/ppx_test",
+        "version": "opam:1.6.0",
+        "source":
+          "archive:https://bitbucket.org/camlspotter/ppx_test/get/1.6.0.tar.gz#md5:e0850fe9072936bac5b422d7398e1448",
+        "files": [],
+        "opam": {
+          "name": "ppx_test",
+          "version": "1.6.0",
+          "opam":
+            "opam-version: \"2.0\"\nname: \"ppx_test\"\nversion: \"1.6.0\"\nsynopsis: \"A ppx replacement of pa_ounit.\"\ndescription: \"\"\"\nppx_test tries to replace pa_ounit. It provides the following syntax sugars:\n\n* _with_location_ e, returns e and its source code location\n* _module_path_, returns the current module path name\n* let %TEST name = e, a replacement of TEST name = e\n* let %TEST_UNIT name = e, a replacement of TEST_UNIT name = e\"\"\"\nmaintainer: \"jun.furuse@gmail.com\"\nauthors: \"Jun Furuse\"\nhomepage: \"http://bitbucket.org/camlspotter/ppx_test\"\nbug-reports:\n  \"https://bitbucket.org/camlspotter/ppx_test/issues?status=new&status=open\"\ndepends: [\n  \"ocaml\" {>= \"4.03.0\"}\n  \"ocamlfind\" {build & >= \"1.5.6\"}\n  \"jbuilder\" {build}\n  \"re\"\n  \"ppxx\" {>= \"2.3.0\" & < \"2.4.0\"}\n]\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"hg+ssh://https//bitbucket.org/camlspotter/ppx_test\"\nurl {\n  src: \"https://bitbucket.org/camlspotter/ppx_test/get/1.6.0.tar.gz\"\n  checksum: \"md5=e0850fe9072936bac5b422d7398e1448\"\n}",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/jbuilder@opam:transition",
+        "@opam/ocamlfind@opam:1.8.0", "@opam/ppxx@opam:2.3.2",
+        "@opam/re@opam:1.8.0", "ocaml@4.7.1003"
       ]
     },
     "@opam/ocamlfind@opam:1.8.0": {
@@ -348,6 +411,26 @@
       "dependencies": [
         "@esy-ocaml/substs@0.0.1", "@opam/ocamlbuild@opam:0.12.0",
         "@opam/ocamlfind@opam:1.8.0", "ocaml@4.7.1003"
+      ]
+    },
+    "@opam/levenshtein@opam:1.1.3": {
+      "record": {
+        "name": "@opam/levenshtein",
+        "version": "opam:1.1.3",
+        "source":
+          "archive:https://bitbucket.org/camlspotter/ocaml_levenshtein/get/1.1.3.tar.gz#md5:107e3629db3531f2f97971c3aff0955f",
+        "files": [],
+        "opam": {
+          "name": "levenshtein",
+          "version": "1.1.3",
+          "opam":
+            "opam-version: \"2.0\"\nname: \"levenshtein\"\nversion: \"1.1.3\"\nsynopsis: \"Levenshtein distance algorithm for general array.\"\ndescription: \"\"\"\nLevenshtein distance algorithm for general array.\n\nThe library provides functors to compute Levenshtein editing distances\nover array like structures.\"\"\"\nmaintainer: \"jun.furuse@gmail.com\"\nauthors: \"Jun Furuse\"\nhomepage: \"https://bitbucket.org/camlspotter/ocaml_levenshtein/\"\nbug-reports:\n  \"https://bitbucket.org/camlspotter/ocaml_levenshtein/issues?status=new&status=open\"\ndepends: [\n  \"ocaml\" {>= \"4.02.1\"}\n  \"jbuilder\" {build}\n  \"ppx_test\" {>= \"1.6.0\"}\n]\nbuild: [\"jbuilder\" \"build\" \"-p\" name \"-j\" jobs]\ndev-repo: \"hg+ssh://https//bitbucket.org/camlspotter/ocaml_levenshtein\"\nurl {\n  src: \"https://bitbucket.org/camlspotter/ocaml_levenshtein/get/1.1.3.tar.gz\"\n  checksum: \"md5=107e3629db3531f2f97971c3aff0955f\"\n}",
+          "override": null
+        }
+      },
+      "dependencies": [
+        "@esy-ocaml/substs@0.0.1", "@opam/jbuilder@opam:transition",
+        "@opam/ppx_test@opam:1.6.0", "ocaml@4.7.1003"
       ]
     },
     "@opam/jbuilder@opam:transition": {
